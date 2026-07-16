@@ -103,3 +103,41 @@ button {
     font-size: 1em;
   }
 }
+/* Prevent any element from causing horizontal scroll on mobile */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0 12px;
+  }
+
+  nav, header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav a, nav img {
+    margin: 6px 0;
+  }
+
+  h1, h2 {
+    font-size: 1.4em;
+  }
+
+  /* stack social icons instead of a tight row */
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
